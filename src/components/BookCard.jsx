@@ -7,18 +7,28 @@ import {
   CardSubtitle,
   Button,
 } from "reactstrap";
-function BookCard(props) {
-  function handleClick() {
-    console.log("click");
-  }
+function BookCard({
+  id,
+  booktitle,
+  bookauthor,
+  imagesource,
+  description,
+  addFunc,
+}) {
+  // function handleClick() {
+  //   console.log("click");
+  // }
 
-  let booktitle = props.booktitle;
-  let bookauthor = props.bookauthor;
-  let imagesource = props.imagesource;
-  let description = props.description;
+  const livro = {
+    id,
+    booktitle,
+    bookauthor,
+    imagesource,
+    description,
+  };
 
   return (
-    <div className='col-4'>
+    <div className="col-4">
       <Card className="cardlivro">
         <div className="imgcontainer">
           <CardImg
@@ -34,7 +44,12 @@ function BookCard(props) {
             {bookauthor}
           </CardSubtitle>
           <CardText>{description}</CardText>
-          <Button className='botaocard' outline color="warning" onClick={handleClick}>
+          <Button
+            className="botaocard"
+            outline
+            color="warning"
+            onClick={() => addFunc({ livro, units: 1 })}
+          >
             Comprar
           </Button>
         </CardBody>

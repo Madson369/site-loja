@@ -3,6 +3,7 @@ import { Input } from "semantic-ui-react";
 import { Button, Icon, Label } from "semantic-ui-react";
 import BookCard from "./components/BookCard.jsx";
 import NavBar from "./components/NavBar.jsx";
+import { PopoverBody } from "reactstrap";
 
 function App() {
   function onChange(event) {
@@ -16,7 +17,7 @@ function App() {
       bookauthor: "Autor: Mulher transfobica",
       imagesource:
         "https://media.discordapp.net/attachments/427876466575933440/885635778640744489/vaelwkn4phm71.png",
-      description: "o menino que era muito bom a varinha",
+      description: "o menino que era muito bom com a varinha",
     },
 
     {
@@ -61,9 +62,33 @@ function App() {
       bookauthor: "Autor: Dr.Droben",
       imagesource:
         "https://images-ext-2.discordapp.net/external/XT_ETDPdCMCC_uG8T3DT8MVJTWTQuhne6Y5ihlxcCX4/https/i.redd.it/bhn7puq76i761.png?width=495&height=676",
-      description:'my balls itch',
-      },
+      description: "my balls itch",
+    },
   ];
+
+  var cart = [];
+
+  function handleAddFunc(product) {
+    const check = () => {
+      for (let i = 0; i < cart.length; i++) {
+        if (product.livro.id === cart[i].livro.id) {
+          cart[i].units = cart[i].units + 1;
+          return true;
+        }
+      }
+    };
+
+    const hasId = cart.some(check);
+    console.log(hasId);
+    if (hasId == false) {
+      cart.push(product);
+    }
+
+    console.log(cart);
+    // console.log(product.livro.id);
+    // console.log(cart[0].livro.id);
+  }
+
 
   return (
     <div className="teste">
@@ -72,6 +97,7 @@ function App() {
           classname="logo"
           className="item"
           src="https://media.discordapp.net/attachments/427876466575933440/885420040822857748/madso.png"
+          alt="hmm"
         ></img>
         <Input
           placeholder="Pesquisar..."
@@ -96,11 +122,12 @@ function App() {
           {products.map((p) => {
             return (
               <BookCard
-                key={p.id}
+                id={p.id}
                 booktitle={p.booktitle}
                 bookauthor={p.bookauthor}
                 imagesource={p.imagesource}
                 description={p.description}
+                addFunc={handleAddFunc}
               />
             );
           })}
