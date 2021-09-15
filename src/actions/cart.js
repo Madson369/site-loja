@@ -19,3 +19,14 @@ export const adicionar = (objeto) => {
       payload: objeto
     };
   };
+
+
+  export const remover = (objeto) => {
+    return {
+      type: 'REMOVER',
+      payload: objeto
+    };
+  };
+
+
+

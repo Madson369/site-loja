@@ -118,3 +118,7 @@ img.item {
   width: auto;
   height: auto;
 }
+
+.arrows {
+  cursor: pointer;
+}

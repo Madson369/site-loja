@@ -5,6 +5,9 @@ import { Button } from "reactstrap";
 import { useDispatch } from "react-redux";
 import { subtrair } from ".././actions/cart.js";
 import { atualizar } from ".././actions/cart.js";
+import { remover } from ".././actions/cart.js";
+import { ChevronLeft } from "react-bootstrap-icons";
+import { ChevronRight } from "react-bootstrap-icons";
 
 const Pagecart = () => {
   const dispatch = useDispatch();
@@ -16,6 +19,12 @@ const Pagecart = () => {
 
   function handleMinusFunc(product) {
     dispatch(subtrair(product));
+  }
+
+  function handleRemoveFunc(product) {
+    const index = carrinho.indexOf(product, 0)
+    dispatch(remover(index));
+
   }
 
   return (
@@ -37,22 +46,24 @@ const Pagecart = () => {
                   <span className="textcart">{p.livro.booktitle}</span>
                 </div>
                 <div>
-                  <span className="textcart">Quantidade:{p.units}</span>
-                  <Button
-                    onClick={() => {
-                      handlePlusFunc(p);
-                    }}
-                  >
-                    +
-                  </Button>
-
-                  <Button
+                  <ChevronLeft
+                    className="arrows"
                     onClick={() => {
                       handleMinusFunc(p);
                     }}
-                  >
-                    -
-                  </Button>
+                  ></ChevronLeft>
+
+                  <span className="textcart">{p.units}</span>
+
+                  <ChevronRight
+                    className="arrows"
+                    onClick={() => {
+                      handlePlusFunc(p);
+                    }}
+                  ></ChevronRight>
+                  <Button onClick={() => {
+                    handleRemoveFunc(p)
+                  }}>teste</Button>
                 </div>
                 <div>
                   <span className="textcart">Preço:{p.livro.price}</span>

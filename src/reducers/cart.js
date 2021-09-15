@@ -17,16 +17,23 @@ const cartReducer = (state = [], action) => {
 
     case "SUBTRAIR":
       let teste = [...state];
-      console.log('111')
+
       teste = teste.map((p) => {
-        if (p.livro.id === action.payload.livro.id) {
-          p.units = p.units-1;
+        if (p.livro.id === action.payload.livro.id && p.units > 1) {
+          p.units--;
         }
 
         return p;
       });
       console.log(teste);
       return teste;
+
+    case "REMOVER":
+      let removed = [...state];
+
+      removed.splice(action.payload,1);
+
+      return removed;
 
     default:
       return state;
