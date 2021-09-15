@@ -13,6 +13,7 @@ function BookCard({
   bookauthor,
   imagesource,
   description,
+  price,
   addFunc,
 }) {
   // function handleClick() {
@@ -25,6 +26,7 @@ function BookCard({
     bookauthor,
     imagesource,
     description,
+    price,
   };
 
   return (
@@ -44,6 +46,7 @@ function BookCard({
             {bookauthor}
           </CardSubtitle>
           <CardText>{description}</CardText>
+
           <Button
             className="botaocard"
             outline

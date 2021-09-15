@@ -1,0 +1,120 @@
+.topo {
+  display: flex;
+  flex-direction: row;
+  padding-left: 300px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: greenyellow;
+}
+
+.ui.input > input {
+  display: block;
+  margin: auto;
+  border: 1px solid gray;
+  width: 600px;
+  height: 50px;
+  border-radius: 1px;
+}
+
+.ui.labeled.button > .button {
+  background-color: greenyellow;
+}
+
+.logo.item {
+  order: 1;
+}
+
+img.item {
+  cursor: pointer;
+}
+
+.ui.input.item {
+  order: 2;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.btn.item {
+  order: 3;
+  background-color: greenyellow;
+  color: black;
+}
+
+.imgcontainer {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+}
+
+.fotolivro {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-width: 230px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.cardlivro {
+  height: 350px;
+  margin: 10px 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.titlecart {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartcontainer {
+  padding-top: 14px;
+  border-left-width: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 14px;
+}
+
+.itemincart {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr fit-content(20%);
+  border-bottom: 1px solid #ddd;
+  height: 150px;
+  margin: 10px 0px;
+  grid-template-areas: "";
+}
+
+.cartdiv {
+  background-color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.textcart {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(66, 70, 77);
+}
+
+.containeritemimg {
+  height: 200px;
+  width: 200px;
+}
+
+.cartitemimg {
+  max-width: 100%;
+  max-width: 230px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+}
