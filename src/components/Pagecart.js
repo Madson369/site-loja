@@ -8,6 +8,7 @@ import { atualizar } from ".././actions/cart.js";
 import { remover } from ".././actions/cart.js";
 import { ChevronLeft } from "react-bootstrap-icons";
 import { ChevronRight } from "react-bootstrap-icons";
+import { Trash } from "react-bootstrap-icons";
 
 const Pagecart = () => {
   const dispatch = useDispatch();
@@ -22,9 +23,8 @@ const Pagecart = () => {
   }
 
   function handleRemoveFunc(product) {
-    const index = carrinho.indexOf(product, 0)
+    const index = carrinho.indexOf(product, 0);
     dispatch(remover(index));
-
   }
 
   return (
@@ -40,7 +40,11 @@ const Pagecart = () => {
             return (
               <div className="itemincart">
                 <div className="containeritemimg">
-                  <img className="cartitemimg" src={p.livro.imagesource}></img>
+                  <img
+                    className="cartitemimg"
+                    alt="hmm"
+                    src={p.livro.imagesource}
+                  ></img>
                 </div>
                 <div>
                   <span className="textcart">{p.livro.booktitle}</span>
@@ -61,12 +65,18 @@ const Pagecart = () => {
                       handlePlusFunc(p);
                     }}
                   ></ChevronRight>
-                  <Button onClick={() => {
-                    handleRemoveFunc(p)
-                  }}>teste</Button>
+                  <button
+                    className="butaopica"
+                    onClick={() => {
+                      handleRemoveFunc(p);
+                    }}
+                  >
+                    <Trash />
+                    Remover
+                  </button>
                 </div>
                 <div>
-                  <span className="textcart">Preço:{p.livro.price}</span>
+                  <span className="textcart">Preço:{p.livro.price}R$</span>
                 </div>
               </div>
             );

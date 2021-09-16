@@ -81,6 +81,8 @@ img.item {
   padding-left: 18px;
   padding-right: 18px;
   padding-bottom: 14px;
+  width: 75%;
+  
 }
 
 .itemincart {
@@ -90,6 +92,7 @@ img.item {
   height: 150px;
   margin: 10px 0px;
   grid-template-areas: "";
+
 }
 
 .cartdiv {
@@ -98,6 +101,7 @@ img.item {
   padding-bottom: 15px;
   margin-bottom: 20px;
   padding-left: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .textcart {
@@ -114,11 +118,22 @@ img.item {
 .cartitemimg {
   max-width: 100%;
   max-width: 230px;
-  max-height: 140px;
+  max-height: 150px;
   width: auto;
   height: auto;
 }
 
 .arrows {
   cursor: pointer;
+}
+.butaopica {
+  border: 0;
+  background-color: transparent;
+}
+
+.butaopica svg{
+  margin-right: 4px ;
+  font-size: 20px;
+
+
 }
