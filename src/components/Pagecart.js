@@ -27,6 +27,19 @@ const Pagecart = () => {
     dispatch(remover(index));
   }
 
+  const sum = carrinho
+    .map((p) => {
+      let total = 0;
+      total = total + p.livro.price * p.units;
+      console.log(total);
+      return total;
+    })
+    .reduce(function (a, b) {
+      return a + b;
+    }, 0);
+
+  //console.log(sum);
+
   return (
     <div>
       <Topo></Topo>
@@ -81,6 +94,7 @@ const Pagecart = () => {
               </div>
             );
           })}
+          <div className='divdototal'>{sum > 0 ? <span className="total">Total: R${sum} </span> : null}</div>
         </div>
       </div>
     </div>
