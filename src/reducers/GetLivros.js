@@ -1,7 +1,8 @@
 const getLivroReducer = (state = [], action) => {
   switch (action.type) {
     case "RECEBER":
-      state = [...state, action.payload];
+
+      state = [action.payload];
       console.log("aaa");
       return state;
 
