@@ -1,14 +1,10 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
 import BookCard from "./components/BookCard.jsx";
-import NavBar from "./components/NavBar.jsx";
 import Topo from "./components/Topo.jsx";
 import { useSelector, useDispatch } from "react-redux";
-import { adicionar } from "./actions/cart.js";
-import { atualizar } from "./actions/cart.js";
-import { receber } from "./actions/GetLivros.js";
+import { adicionar, atualizar } from "./actions/cart.js";
 import { getBooks } from "./components/GetBook";
-import { Button } from "reactstrap";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -27,9 +23,6 @@ function Home() {
     }
   }, [recebido]);
 
-  function onChange(event) {
-    console.log(event.target.value);
-  }
 
   const carrinho = useSelector((state) => state.cart);
 

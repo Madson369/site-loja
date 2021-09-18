@@ -4,3 +4,11 @@ export const receber = (objeto) => {
       payload: objeto
     };
   };
+
+
+  export const esvaziar = (objeto) => {
+    return {
+      type: 'ESVAZIAR',
+      payload: objeto
+    };
+  };

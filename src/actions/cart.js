@@ -29,4 +29,11 @@ export const adicionar = (objeto) => {
   };
 
 
+  export const limpar = (objeto) => {
+    return {
+      type: 'LIMPAR',
+      payload: objeto
+    };
+  };
+
 

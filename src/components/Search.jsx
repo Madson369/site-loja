@@ -17,7 +17,7 @@ const Search = ({ data, evento }) => {
 
   return (
     <div className="searchresult">
-      {evento != "" && result && result.length > 0
+      {evento !== "" && result && result.length > 0
         ? result.map((b) => {
             return (
               <li onClick={() => onClick(b.id)} className="searchitem">

@@ -7,6 +7,7 @@ import {
   CardSubtitle,
   Button,
 } from "reactstrap";
+import { useHistory } from "react-router-dom";
 function BookCard({
   id,
   booktitle,
@@ -16,9 +17,11 @@ function BookCard({
   price,
   addFunc,
 }) {
-  // function handleClick() {
-  //   console.log("click");
-  // }
+  let history = useHistory();
+
+  function onClick(id) {
+    history.push(`/sobre/${id}`);
+  }
 
   const livro = {
     id,
@@ -45,7 +48,6 @@ function BookCard({
           <CardSubtitle tag="h6" className="mb-2 text-muted">
             {bookauthor}
           </CardSubtitle>
-          <CardText>{description}</CardText>
 
           <Button
             className="botaocard"
@@ -54,6 +56,14 @@ function BookCard({
             onClick={() => addFunc({ livro, units: 1 })}
           >
             Comprar
+          </Button>
+          <Button
+            className="botaocard"
+            outline
+            color="warning"
+            onClick={() => onClick(livro.id)}
+          >
+            Ver mais
           </Button>
         </CardBody>
       </Card>

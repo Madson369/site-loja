@@ -31,9 +31,14 @@ const cartReducer = (state = [], action) => {
     case "REMOVER":
       let removed = [...state];
 
-      removed.splice(action.payload,1);
+      removed.splice(action.payload, 1);
 
       return removed;
+
+    case "LIMPAR":
+      let limpo = [...action.payload];
+
+      return limpo;
 
     default:
       return state;

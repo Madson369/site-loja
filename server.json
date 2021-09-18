@@ -3,56 +3,86 @@
   "livros": [
     {
       "id": 1,
-      "booktitle": "Harry porta",
-      "bookauthor": "Autor: Mulher transfobica",
-      "imagesource": "https://media.discordapp.net/attachments/427876466575933440/885635778640744489/vaelwkn4phm71.png",
-      "description": "o menino que era muito bom com a varinha",
-      "price": 50
+      "booktitle": "A arte da guerra",
+      "bookauthor": "Autor: Sun Tzu ",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/51oHEIpVOwL._SX354_BO1,204,203,200_.jpg",
+      "description": "A guerra é um assunto de importância vital para o Estado; o reino da vida ou da morte; o caminho para a sobrevivência ou a ruína. É indispensável estudá-la profundamente",
+      "price": 27.53
     },
 
     {
       "id": 2,
-      "booktitle": "Futuroama",
-      "bookauthor": "Autor: Sla porra",
-      "imagesource": "https://media.discordapp.net/attachments/239838587246346242/886052286453907456/1551398008572.jpg?width=724&height=676",
-      "description": "o futuro que amava ser o futuro",
-      "price": 57
+      "booktitle": "O pequeno principe",
+      "bookauthor": "Autor: Antoine de Saint-Exupéry",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/41mwTbksBrL._SX337_BO1,204,203,200_.jpg",
+      "description": "Nesta clássica história que marcou gerações de leitores em todo o mundo, um piloto cai com seu avião no deserto do Saara e encontra um pequeno príncipe, que o leva a uma jornada filosófica e poética através de planetas que encerram a solidão humana. A edição conta com a clássica tradução do poeta imortal dom Marcos Barbosa, e é a versão mais consagrada da obra, publicada no Brasil desde 1952.",
+      "price": 10.75
     },
 
     {
       "id": 3,
-      "booktitle": "Passadorama",
-      "bookauthor": "Autor: ronaldo gaucho",
-      "imagesource": "https://media.discordapp.net/attachments/239838587246346242/886052288068714547/Anotacao_2021-03-13_050734.png",
-      "description": "ronaldo chaugo brilha muito no corinrtias",
-      "price": 30
+      "booktitle": "O capital",
+      "bookauthor": "Autor: Karl Marx",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/41DB4lCLuHL._SX331_BO1,204,203,200_.jpg",
+      "description": "O Capital – Extratos por Paul Lafargue (autor do clássico Direito à Preguiça) é a compilação dos trechos essenciais da obra de Karl Marx sobre o funcionamento do capitalismo, com o objetivo de facilitar o entendimento sem perder sua profundidade.Uma edição elogiada pelo próprio Marx.",
+      "price": 29.92
     },
 
     {
       "id": 4,
-      "booktitle": "Google.com/androginia",
-      "bookauthor": "Autor: mark zukerberg",
-      "imagesource": "https://media.discordapp.net/attachments/239838587246346242/886052290899873802/Anotacao_2021-03-13_091054.png",
-      "description": "isso mesmo piranha eu não sou o jô soares",
-      "price": 32
+      "booktitle": "A vida e as aventuras de Robinson Crusoé",
+      "bookauthor": "Autor: Daniel Defoe",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/51ujtvec5+L._SX339_BO1,204,203,200_.jpg",
+      "description": "Uma tempestade faz o navio de Robinson Crusoé naufragar. Ele foi o único sobrevivente da tragédia, e precisa aprender a viver numa ilha deserta. Com os destroços do navio, ele aprende a construir ferramentas, cabanas e materiais para tornar sua vida mais fácil. Com reflexões e espiritualidade,Robinson consegue sobreviver em condições adversas.Um clássico da literatura inglesa consolidado no universo infantojuvenil há gerações.",
+      "price": 9.99
     },
 
     {
       "id": 5,
-      "booktitle": "Selo de garantia quebrado",
-      "bookauthor": "Autor: ybite",
-      "imagesource": "https://media.discordapp.net/attachments/239838587246346242/886052572249608232/ENbDpMLX0AAC-cq.jpg",
-      "description": "roubaram meu pc",
+      "booktitle": "A megera domada",
+      "bookauthor": "Autor: William Shakespeare ",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/51RbZIl2v7L._SX341_BO1,204,203,200_.jpg",
+      "description": "Graciosa e delicada, Bianca era cortejada por vários pretendentes. Catarina, mais velha, de temperamento difícil e decidida a nunca se casar, espantava quem aparecesse para pedir sua mão em casamento. Foi então que Bianca articulou um plano para Petrucchio, recém-chegado à cidade, pedir a mão da megera. Esperto, pensando em se dar bem financeiramente, ele agarrou a oportunidade de casar-se com Catarina. Água e vinho ele rústico, mal-educado e pobre ela, fina, culta e com um dote de fazer inveja a qualquer moça da cidade , os protagonistas encantam leitores e espectadores desde 1593. Adaptada para prosa pelo escritor Júlio Emílio Braz, a peça de teatral do dramaturgo inglês William Shakespeare é uma das primeiras e a mais rica, de acordo com os críticos escritas pelo autor e tem como tema central o casamento, a guerra entre os sexos opostos e as conquistas amorosas.",
       "price": 10
     },
 
+
     {
       "id": 6,
-      "booktitle": "doença geneticas da dupla escrotal",
-      "bookauthor": "Autor: Dr.Droben",
-      "imagesource": "https://images-ext-2.discordapp.net/external/XT_ETDPdCMCC_uG8T3DT8MVJTWTQuhne6Y5ihlxcCX4/https/i.redd.it/bhn7puq76i761.png?width=495&height=676",
-      "description": "my balls itch",
-      "price": 200
+      "booktitle": "Teoria geral do emprego, do juro e da moeda",
+      "bookauthor": "Autor: John Maynard Keynes",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/41wBHAfuYML._SX354_BO1,204,203,200_.jpg",
+      "description": "Keynes publicou o mais provocante livro de sua geração. Conhecida por todos os economistas como a Teoria Geral, a obra propõe uma grande discussão do ciclo comercial e uma nova abordagem para a determinação do nível de atividade econômica, dos problemas do emprego e do desemprego e das causas da inflação. ",
+      "price": 51.98
+    },
+    {
+      "id": 7,
+      "booktitle": "O guia do mochileiro das galaxias",
+      "bookauthor": "Autor: Douglas Adams",
+      "imagesource": "https://lojasaraiva.vteximg.com.br/arquivos/ids/31728727/mochileiro.jpg?v=637371841099670000",
+      "description": "Segundos antes de a Terra ser destruída, Arthur Dent é salvo por Ford Prefect, um E.T. que fazia pesquisa para a nova edição de O Guia do Mochileiro das Galáxias. Pegando carona numa nave alienígena, os dois dão início a uma alucinante viagem pelo tempo e pelo espaço.",
+      "price": 74.90
+    },
+
+    {
+      "id": 8,
+      "booktitle": "Mentes perigosas: O psicopata mora ao lado",
+      "bookauthor": "Autor: Ana Beatriz Barbosa Silva",
+      "imagesource": "https://images-na.ssl-images-amazon.com/images/I/41rn8Z0LCOL._SX338_BO1,204,203,200_.jpg",
+      "description": "Eles podem ter várias faces. Disfarçados de pessoas de bem, autora de mentes ansiosas ocultam o que realmente são: seres calculistas, manipuladores e insensíveis aos sentimentos alheios. Estão ao nosso lado no trabalho, na escola, na vizinhança e no círculo familiar e, a qualquer momento, podem gerar destruição em nossa vida",
+      "price": 74.90
+    },
+
+    {
+      "id": 9,
+      "booktitle": "1984",
+      "bookauthor": "Autor: George Orwell",
+      "imagesource": "https://m.media-amazon.com/images/I/51enL1+QZfL._SY346_.jpg",
+      "description": "Publicado em 1949, o texto de Orwell nasceu destinado à polêmica. Traduzido em mais de sessenta países, virou minissérie, filmes, quadrinhos, mangás e até uma ópera. Ganhou holofotes em 1999, quando uma produtora holandesa batizou seu reality show de Big Brother. 1984 foi responsável pela popularização de muitos termos e conceitos, como Grande Irmão, duplopensar, novidioma, buraco da memória e 2+2=5. O trabalho de Winston, o herói de 1984, é reescrever artigos de jornais do passado, de modo que o registro histórico sempre apoie a ideologia do Partido. Grande parte do Ministério também destrói os documentos que não foram revisados, dessa forma não há como provar que o governo esteja mentindo. Winston é um trabalhador diligente e habilidoso, mas odeia secretamente o Partido e sonha com a rebelião contra o Grande Irmão.",
+      "price": 30.69
     }
+
+
+
   ]
 }

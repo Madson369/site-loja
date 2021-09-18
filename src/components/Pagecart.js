@@ -1,14 +1,9 @@
-import NavBar from "./NavBar.jsx";
 import Topo from "./Topo.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { Button } from "reactstrap";
-import { subtrair } from ".././actions/cart.js";
-import { atualizar } from ".././actions/cart.js";
-import { remover } from ".././actions/cart.js";
-import { ChevronLeft } from "react-bootstrap-icons";
-import { ChevronRight } from "react-bootstrap-icons";
-import { Trash } from "react-bootstrap-icons";
+import { subtrair, atualizar, remover, limpar } from ".././actions/cart.js";
+import { ChevronLeft, ChevronRight, Trash } from "react-bootstrap-icons";
 
 const Pagecart = () => {
   const dispatch = useDispatch();
@@ -33,7 +28,11 @@ const Pagecart = () => {
     dispatch(remover(index));
   }
 
-  const sum = carrinho
+  function handleClearFunc(product) {;
+    dispatch(limpar([]));
+  }
+
+  let sum = carrinho
     .map((p) => {
       let total = 0;
       total = total + p.livro.price * p.units;
@@ -43,6 +42,8 @@ const Pagecart = () => {
     .reduce(function (a, b) {
       return a + b;
     }, 0);
+
+    sum = sum.toFixed(2)
 
   //console.log(sum);
 
@@ -103,6 +104,9 @@ const Pagecart = () => {
             })}
             <div className="divdototal">
               {sum > 0 ? <span className="total">Total: R${sum} </span> : null}
+              <Button className="botaocard" outline color="warning" onClick={() => {handleClearFunc()}} > 
+                Comprar
+              </Button>
             </div>
           </div>
         </div>
