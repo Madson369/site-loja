@@ -8,6 +8,9 @@ import {
   Button,
 } from "reactstrap";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 function BookCard({
   id,
   booktitle,
@@ -32,6 +35,18 @@ function BookCard({
     price,
   };
 
+  const teste = () => {
+    toast(`${booktitle} foi adicionado ao carrinho`, {
+      className: "custom-toast",
+      autoClose: 2500,
+      position: "top-right",
+      pauseOnHover: false,
+      hideProgressBar:true,
+
+
+    });
+  };
+
   return (
     <div className="col-4">
       <Card className="cardlivro">
@@ -53,7 +68,10 @@ function BookCard({
             className="botaocard"
             outline
             color="warning"
-            onClick={() => addFunc({ livro, units: 1 })}
+            onClick={() => {
+              addFunc({ livro, units: 1 });
+              teste();
+            }}
           >
             Comprar
           </Button>

@@ -50,12 +50,8 @@ function Home() {
   return (
     <div>
       <Topo></Topo>
-      <div>
-        {/* <h1>
-          <NavBar></NavBar>{" "}
-        </h1> */}
-      </div>
-      <h1>
+
+      {/* <h1>
         Carrinho{" "}
         {carrinho.map((p) => {
           return (
@@ -64,7 +60,7 @@ function Home() {
             </ul>
           );
         })}{" "}
-      </h1>
+      </h1> */}
       <div className="container">
         <div className="row">
           {products && products.length > 0
