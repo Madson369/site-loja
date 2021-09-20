@@ -41,7 +41,9 @@ const Topo = () => {
       ></img>
       <div
         onBlur={() => {
-          setShow(false);
+          setTimeout(() => {
+            setShow(false);
+          }, 100);
         }}
         onFocus={() => {
           setShow(true);

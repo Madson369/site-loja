@@ -1,6 +1,6 @@
 .topo {
   display: flex;
-  flex-direction: row;
+  height: 56px;
   padding-left: 300px;
   padding-top: 3px;
   padding-bottom: 3px;
