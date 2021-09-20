@@ -20,6 +20,7 @@ const Topo = () => {
   }
 
   const [evento, setEvento] = useState("");
+  const [show, setShow] = useState(false);
 
   function onChange(event) {
     setEvento(event.target.value);
@@ -38,14 +39,24 @@ const Topo = () => {
         src="https://media.discordapp.net/attachments/427876466575933440/885420040822857748/madso.png"
         alt="hmm"
       ></img>
-      <div className="inputcontainer">
+      <div
+        onBlur={() => {
+          setShow(false);
+        }}
+        onFocus={() => {
+          setShow(true);
+        }}
+        className="inputcontainer"
+      >
         <Input
           placeholder="Pesquisar..."
           className="input"
           className="item"
           onChange={onChange}
         />
-        <Search evento={evento} data={recebido}></Search>
+        {show == true ? (
+          <Search evento={evento} data={recebido}></Search>
+        ) : null}
       </div>
       <Button classname="btn" className="item" onClick={handleClick}>
         <Cart></Cart>

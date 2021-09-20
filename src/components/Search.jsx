@@ -9,6 +9,7 @@ const Search = ({ data, evento }) => {
     history.push(`/sobre/${id}`);
   }
 
+
   function search(p) {
     return p.booktitle.toLowerCase().includes(evento.toLowerCase());
   }

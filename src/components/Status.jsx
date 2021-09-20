@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { getSingleBook } from "./GetBook";
 import { useParams } from "react-router-dom";
-import { adicionar , atualizar } from "../actions/cart.js";
+import { adicionar, atualizar } from "../actions/cart.js";
 import { esvaziar } from "../actions/GetLivros";
 import { Button } from "reactstrap";
+import { toast } from "react-toastify";
 
 const Status = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const Status = () => {
   useEffect(() => {
     return () => {
       setProduct([]);
-      dispatch(esvaziar())
+      dispatch(esvaziar());
     };
   }, []);
 
@@ -59,6 +60,16 @@ const Status = () => {
     }
   }
 
+  const teste = () => {
+    toast(`${product.booktitle} foi adicionado ao carrinho`, {
+      className: "custom-toast",
+      autoClose: 2500,
+      position: "top-right",
+      pauseOnHover: false,
+      hideProgressBar: true,
+    });
+  };
+
   return (
     <div>
       <Topo></Topo>
@@ -67,18 +78,27 @@ const Status = () => {
           <div className="statuscontainer">
             <div className="productcontainer">
               <div className="productimgcontainer">
-                <img alt='teste' className="productimg" src={product.imagesource}></img>
+                <img
+                  alt="teste"
+                  className="productimg"
+                  src={product.imagesource}
+                ></img>
               </div>
               <div className="infocontainer">
                 <h1>{product.booktitle}</h1>
-                <span>{product.bookauthor}</span>
-                <div>{product.description}</div>
+                <span>
+                  <b>{product.bookauthor}</b>
+                </span>
+                <div>Descrição: {product.description}</div>
                 <div className="pricecontainer">R${product.price}</div>
                 <Button
                   className="botaocard"
                   outline
                   color="warning"
-                  onClick={() => addFunc({ livro, units: 1 })}
+                  onClick={() => {
+                    addFunc({ livro, units: 1 });
+                    teste();
+                  }}
                 >
                   Comprar
                 </Button>
@@ -87,7 +107,7 @@ const Status = () => {
           </div>
         </div>
       ) : (
-        "trouxa"
+        ""
       )}
     </div>
   );
