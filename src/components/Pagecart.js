@@ -105,7 +105,7 @@ const Pagecart = () => {
             <div className="divdototal">
               {sum > 0 ? <span className="total">Total: R${sum} </span> : null}
               <Button className="botaocard" outline color="warning" onClick={() => {handleClearFunc()}} > 
-                Comprar
+                Confirmar compra
               </Button>
             </div>
           </div>
