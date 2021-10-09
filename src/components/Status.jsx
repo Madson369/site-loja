@@ -89,7 +89,9 @@ const Status = () => {
                 <span>
                   <b>{product.bookauthor}</b>
                 </span>
-                <div>Descrição: {product.description}</div>
+                <div className='container_description'>
+                  Descrição: <span>{product.description}</span>
+                </div>
                 <div className="pricecontainer">R${product.price}</div>
                 <Button
                   className="botaocard"
